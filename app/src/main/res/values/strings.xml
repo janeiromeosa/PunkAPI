@@ -4,4 +4,8 @@
     <string name="beer_abv">Beer abv</string>
     <string name="something_went_wrong">Something went wrong</string>
     <string name="retry">Retry</string>
+    <string name="description">Description</string>
+    <string name="hops">Hops</string>
+    <string name="malt">Malt</string>
+    <string name="food_pairing">Food Pairing</string>
 </resources>

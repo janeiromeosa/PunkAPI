@@ -3,56 +3,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/item_beer_margin_bottom"
-    >
+    android:layout_margin="@dimen/item_beer_margin_bottom"
+    app:contentPadding="8dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/description" />
 
         <TextView
             android:id="@+id/tv_description"
             android:layout_width="match_parent"
 
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textStyle="bold"
+
             tools:text="description" />
 
         <TextView
-            android:id="@+id/tv_infomation_on_malt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/hops" />
+
+        <TextView
+            android:id="@+id/tv_hops"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_infomation_on_hops"
+            tools:text="hops" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/malt" />
+
+        <TextView
+            android:id="@+id/tv_malt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             tools:text="malt" />
 
         <TextView
-            android:id="@+id/tv_infomation_on_hops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/food_pairing" />
+
+        <TextView
+            android:id="@+id/tv_food_pairings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_description"
-            tools:text="hops" />
+            tools:text="food pairings" />
 
-        <ListView
-            android:id="@+id/lv_food_pairings"
-            android:layout_width="411dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="112dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_infomation_on_malt"
-            tools:text="food pairings"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 
 </androidx.cardview.widget.CardView>
