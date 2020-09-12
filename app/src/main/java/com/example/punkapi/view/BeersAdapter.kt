@@ -1,6 +1,5 @@
 package com.example.punkapi.view
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +10,7 @@ import com.example.punkapi.BeersClickListener
 import com.example.punkapi.R
 import com.example.punkapi.model.BeersResponse
 import com.squareup.picasso.Picasso
+import java.util.*
 
 class BeersAdapter(val data: MutableList<BeersResponse>, private val listener: BeersClickListener) :
     RecyclerView.Adapter<BeersAdapter.BeersViewHolder>() {
@@ -35,6 +35,7 @@ class BeersAdapter(val data: MutableList<BeersResponse>, private val listener: B
         private val beerImage: ImageView = itemView.findViewById(R.id.img_beer)
         private val heart: ImageView = itemView.findViewById(R.id.iv_heart)
 
+
         fun bind(beer: BeersResponse, listener: BeersClickListener) {
             name.text = beer.name
             abv.text = beer.abv.toString()
@@ -47,4 +48,6 @@ class BeersAdapter(val data: MutableList<BeersResponse>, private val listener: B
 
         }
     }
+
+
 }

@@ -22,3 +22,21 @@ data class BeersResponse(
     @SerializedName("food_pairing")
     val foodPairing: List<String>
 ):Parcelable
+
+class CompareByNames {
+    companion object : Comparator<BeersResponse>{
+
+        override fun compare(o1: BeersResponse, o2: BeersResponse): Int {
+            return o1.name.compareTo(o2.name)
+        }
+    }
+}
+
+class CompareByRating {
+    companion object : Comparator<BeersResponse>{
+
+        override fun compare(o1: BeersResponse, o2: BeersResponse): Int {
+            return o1.abv.compareTo(o2.abv)
+        }
+    }
+}
